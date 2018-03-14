@@ -1,0 +1,32 @@
+{
+  "name": "findahafiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aven30/findahafiz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aven30/findahafiz/issues"
+  },
+  "homepage": "https://github.com/Aven30/findahafiz#readme",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-util": "latest",
+    "gulp-sass": "latest",
+    "gulp-coffee": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest"
+  },
+  "dependencies": {
+    "require-dir": "^1.0.0",
+    "webpack": "^4.1.1"
+  }
+}
