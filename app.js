@@ -24,7 +24,4 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(paths.dist))
 
-app.get('*', (req, res) => res.sendFile(paths.index))
-app.get('bundle.js', (req, res) => res.sendFile(paths.dist + '/dist/bundle.js'))
-
 module.exports = app;
