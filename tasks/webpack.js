@@ -6,7 +6,6 @@ const path = require('path');
 
 let executionCount = 0;
 
-
 Gulp.task('webpack', (callback) => {
 /*
     const plugins = [
@@ -39,13 +38,9 @@ Gulp.task('webpack', (callback) => {
         watch: global.isWatching,
         entry: {
             account: './client/pages/account/index',
-            admin: './client/pages/admin/index',
-            contact: './client/pages/contact/index',
-            login: './client/pages/login/index',
-            signup: './client/pages/signup/index'
         },
         output: {
-            path: path.resolve(__dirname,'public/pages'),
+            path: path.resolve(__dirname,'./../public/pages'),
             filename: '[name].min.js',
             sourceMapFilename: '[name].map.js',
         },
@@ -55,14 +50,11 @@ Gulp.task('webpack', (callback) => {
         module: {
             rules: [{
                 test: /\.jsx?$/,
-                exclude(file) {
-
-                    return file.startsWith(__dirname + '/node_modules');
-                },
+                exclude: /node_modules/,
                 loader: 'babel-loader',
-                query: {
-                    presets: ['react', 'es2015']
-                }
+                // query: {
+                //     presets: ['react', 'es2015']
+                // }
             }]
         },
         devtool,

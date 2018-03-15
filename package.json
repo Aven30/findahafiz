@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "gulp": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,15 +18,24 @@
   },
   "homepage": "https://github.com/Aven30/findahafiz#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^8.0.0-beta.2",
+    "babel-preset-env": "^1.6.1",
     "gulp": "latest",
-    "gulp-util": "latest",
-    "gulp-sass": "latest",
     "gulp-coffee": "latest",
-    "gulp-uglify": "latest",
     "gulp-concat": "latest",
-    "gulp-connect": "latest"
+    "gulp-connect": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-util": "latest",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.41",
+    "@babel/preset-env": "^7.0.0-beta.41",
+    "@babel/preset-react": "^7.0.0-beta.41",
     "require-dir": "^1.0.0",
     "webpack": "^4.1.1"
   }
