@@ -6,7 +6,7 @@ const path = require("path");
 // Set up the express app
 const app = express();
 const paths = {
-    index: path.resolve(__dirname, 'src/client','index.html'),
+    index: path.resolve(__dirname, 'dist','index.html'),
     dist: path.resolve(__dirname, 'dist'),
 }
 
@@ -23,5 +23,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 // }));
 
 app.use(express.static(paths.dist))
+app.get('/*', function (req, res) {
+    res.sendFile(paths.index);
+});
 
 module.exports = app;

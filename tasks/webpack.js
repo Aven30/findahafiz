@@ -62,7 +62,12 @@ Gulp.task('webpack', (callback) => {
             title: 'Find a Hafiz',
             template: './src/client/index.html'
 
-        })]
+        })],
+        devServer: {
+            historyApiFallback: true,
+            contentBase: './',
+            hot: true
+        }
     };
 
     Webpack(config, (err, stats) => {
