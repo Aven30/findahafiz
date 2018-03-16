@@ -2,5 +2,5 @@
 const Gulp = require('gulp');
 
 
-Gulp.task('default', ['webpack']);
+Gulp.task('default', ['webpack', 'nodemon']);
 

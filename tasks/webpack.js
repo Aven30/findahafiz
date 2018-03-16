@@ -36,8 +36,8 @@ Gulp.task('webpack', (callback) => {
     }
 */
     const config = {
-        watch: global.isWatching,
-        entry: './src/client/index.js',
+        watch: true,
+        entry: path.resolve(__dirname,'./../src/client/index.js'),
         output: {
             path: path.resolve(__dirname,'./../dist/'),
             filename: 'bundle.js',
@@ -60,7 +60,8 @@ Gulp.task('webpack', (callback) => {
         plugins: [new HtmlWebpackPlugin({
             hash: true,
             title: 'Find a Hafiz',
-            template: './src/client/index.html'
+            template: 'src/client/index.html',
+            filename: 'dist/index.html'
 
         })],
         devServer: {
