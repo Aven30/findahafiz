@@ -36,13 +36,11 @@ Gulp.task('webpack', (callback) => {
 */
     const config = {
         watch: global.isWatching,
-        entry: {
-            account: './client/pages/account/index',
-        },
+        entry: './src/client/index.js',
         output: {
-            path: path.resolve(__dirname,'./../public/pages'),
-            filename: '[name].min.js',
-            sourceMapFilename: '[name].map.js',
+            path: path.resolve(__dirname,'./../dist/'),
+            filename: 'bundle.js',
+            sourceMapFilename: 'bundle.map.js',
         },
         resolve: {
             extensions: ['*', '.js', '.jsx']
