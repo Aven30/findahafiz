@@ -3,6 +3,7 @@ const Gulp = require('gulp');
 const Gutil = require('gulp-util');
 const Webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let executionCount = 0;
 
@@ -56,7 +57,12 @@ Gulp.task('webpack', (callback) => {
             }]
         },
         devtool,
-       // plugins
+        plugins: [new HtmlWebpackPlugin({
+            hash: true,
+            title: 'Find a Hafiz',
+            template: './src/client/index.html'
+
+        })]
     };
 
     Webpack(config, (err, stats) => {
