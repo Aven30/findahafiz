@@ -1,0 +1,10 @@
+#topHeader {
+  background: $primaryColor;
+
+  a {
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
