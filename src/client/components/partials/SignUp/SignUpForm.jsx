@@ -9,7 +9,6 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e) {
         console.log(this.props);
-        console.log(e);
     }
 
     render() {
