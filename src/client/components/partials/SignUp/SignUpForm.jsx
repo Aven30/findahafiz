@@ -4,8 +4,13 @@ import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
 class SignUpForm extends React.Component {
     constructor(props) {
         super(props)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    handleSubmit(e) {
+        console.log(this.props);
+        console.log(e);
+    }
 
     render() {
         return <Form>
@@ -27,7 +32,7 @@ class SignUpForm extends React.Component {
                     <Input type="email" name="email" id="signup-email"/>
                 </div>
             </FormGroup>
-            <Button block>Submit</Button>
+            <Button block onClick={this.handleSubmit}>Submit</Button>
         </Form>
     }
 }

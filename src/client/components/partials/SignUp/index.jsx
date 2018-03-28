@@ -7,12 +7,13 @@ class SignUp extends React.Component {
     constructor(props) {
         super(props);
         this.nextStep = this.nextStep.bind(this);
-        this.state = {step: 0}
+        this.state = {step: 0, childProps: {}}
     }
 
-    nextStep() {
+    nextStep(props) {
         this.setState({
-            step: this.state.step + 1
+            step: this.state.step + 1,
+            childProps: props
         })
     }
 
@@ -24,8 +25,9 @@ class SignUp extends React.Component {
         ];
 
         const Display = steps[this.state.step];
+        const childProps = this.state.childProps;
 
-        return <Display nextStep = {this.nextStep}/>
+        return <Display {...childProps} nextStep = {this.nextStep}/>
     }
 }
 

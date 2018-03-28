@@ -7,12 +7,13 @@ class Identity extends React.Component {
     }
 
 
+
     render() {
         return <div>
-            <Button onClick={this.props.nextStep} signUpType="hafiz" color="primary" block>
+            <Button onClick={this.props.nextStep({accountType: 'hafiz'})} color="primary" block>
                 I'm a Hafiz
             </Button>
-            <Button onClick={this.props.nextStep} signUpType ="notHafiz" color="primary" block>
+            <Button onClick={this.props.nextStep({accountType: 'notHafiz'})} color="primary" block>
                 I want a Hafiz
             </Button>
         </div>
