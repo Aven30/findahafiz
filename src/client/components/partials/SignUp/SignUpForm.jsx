@@ -17,17 +17,17 @@ class SignUpForm extends React.Component {
                 <Label for="signup-password" className="mb-0">Password</Label>
                 <Input type="password" name="password" id="signup-password"/>
             </FormGroup>
-            <div className="col-md-12">
+            <FormGroup className="row">
                 <div className="col-md-6">
-                    <Label for="signup-email" className="mb-0">Email</Label>
+                    <Label for="signup-email" className="mb-0">First name</Label>
                     <Input type="email" name="email" id="signup-email"/>
                 </div>
                 <div className="col-md-6">
-                    <Label for="signup-email" className="mb-0">Email</Label>
+                    <Label for="signup-email" className="mb-0">Last name</Label>
                     <Input type="email" name="email" id="signup-email"/>
                 </div>
-            </div>
-            <Button>Submit</Button>
+            </FormGroup>
+            <Button block>Submit</Button>
         </Form>
     }
 }
