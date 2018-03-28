@@ -1,5 +1,5 @@
 import React from 'react'
-import SignUp from './partials/SignUp'
+import SignUp from './partials/SignUp/index'
 import {
     Collapse,
     Navbar,

@@ -5,7 +5,7 @@ import {render} from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 
 render((
-    < BrowserRouter >
-    < App / >
-    < /BrowserRouter>
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
 ), document.getElementById('container'));
