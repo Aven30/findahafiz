@@ -5,17 +5,22 @@ class SignUpForm extends React.Component {
     constructor(props) {
         super(props)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.validateEmail = this.validateEmail.bind(this)
     }
 
     handleSubmit(e) {
         console.log(this.props);
     }
 
+    validateEmail(e) {
+        console.log(e.target.value);
+    }
+
     render() {
         return <Form>
             <FormGroup>
                 <Label for="signup-email" className="mb-0">Email</Label>
-                <Input type="email" name="email" id="signup-email"/>
+                <Input type="email" name="email" id="signup-email" onBlur={this.validateEmail}/>
             </FormGroup>
             <FormGroup>
                 <Label for="signup-password" className="mb-0">Password</Label>
