@@ -9,7 +9,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    res.send(res.params);
+    res.sendStatus(200);
 });
 
 

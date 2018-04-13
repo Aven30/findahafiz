@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Aven30/findahafiz#readme",
   "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.44",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^8.0.0-beta.2",
@@ -43,6 +44,7 @@
     "@babel/core": "^7.0.0-beta.41",
     "@babel/preset-env": "^7.0.0-beta.41",
     "@babel/preset-react": "^7.0.0-beta.41",
+    "axios": "^0.18.0",
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
