@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const path = require("path");
+const routers = require("./src/server/routes");
 
 // Set up the express app
 const app = express();
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // }));
 
 app.use(express.static(paths.dist))
+app.use('/api', routers);
 app.get('/*', function (req, res) {
     res.sendFile(paths.index);
 });

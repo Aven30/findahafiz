@@ -1,19 +1,20 @@
-import React from 'react'
-import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap'
-import {validateEmail, validateRequired} from '../../../utilities/validations'
+import React from 'react';
+import {Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import {validateEmail, validateRequired} from '../../../utilities/validations';
 
 class SignUpForm extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {form: {}, errors: {}}
+        this.state = {form: {}, errors: {}};
 
-        this.setFirstName = this.setFirstName.bind(this)
-        this.setLastName = this.setLastName.bind(this)
-        this.setEmail = this.setEmail.bind(this)
-        this.setPassword = this.setPassword.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
-        this.validateFields = this.validateFields.bind(this)
+        this.setFirstName = this.setFirstName.bind(this);
+        this.setLastName = this.setLastName.bind(this);
+        this.setEmail = this.setEmail.bind(this);
+        this.setPassword = this.setPassword.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.validateFields = this.validateFields.bind(this);
+        this.submit = this.submit.bind(this);
     }
 
     setEmail(e) {
@@ -33,17 +34,25 @@ class SignUpForm extends React.Component {
     }
 
     checkEmail(e) {
-        this.state.errors.email = !validateEmail(this.state.form.email)
+        this.state.errors.email = !validateEmail(this.state.form.email);
         this.forceUpdate()
     }
 
     handleSubmit(e) {
 
         if (this.validateFields()) {
-            console.log('NOT GONNA SUBMIT!')
+            console.log('NOT GONNA SUBMIT!');
         } else {
-            console.log('LET US SUBMIT!')
+            this.submit();
         }
+    }
+
+    submit() {
+        fetch('/api/3').then(res => {
+            return res.json();
+        }).then(data => {
+            console.log(data);
+        });
     }
 
     validateFields() {
