@@ -13,6 +13,8 @@ module.exports = (sequelize, DataTypes) => {
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE,
     deleted_at: DataTypes.DATE,
+    first_name: DataTypes.STRING,
+    last_name: DataTypes.STRING,
   }, {});
 
   user.associate = function(models) {

@@ -6,8 +6,6 @@ class Identity extends React.Component {
         super(props)
     }
 
-
-
     render() {
         return <div>
             <Button onClick={() => this.props.nextStep({accountType: 'hafiz'})} color="primary" block>

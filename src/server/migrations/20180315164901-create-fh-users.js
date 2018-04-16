@@ -20,6 +20,14 @@ module.exports = {
             profile_id: {
                 type: Sequelize.INTEGER
             },
+            first_name: {
+                allowNull: false,
+                type: Sequelize.STRING
+            },
+            last_name: {
+                allowNull: false,
+                type: Sequelize.STRING
+            },
             is_hafiz: {
                 allowNull: false,
                 type: Sequelize.BOOLEAN
