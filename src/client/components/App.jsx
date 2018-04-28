@@ -1,12 +1,13 @@
-import React from 'react'
-import Header from './Header'
-import Layout from './Layout'
+import React from 'react';
+import Header from './Header';
+import Layout from './Layout';
+import {SessionProvider, SessionConsumer} from './context/SessionContext';
 
 const App = () => (
-    <div>
+    <SessionProvider>
         <Header />
         <Layout />
-    </div>
-)
+    </SessionProvider>
+);
 
 export default App

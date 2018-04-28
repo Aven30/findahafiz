@@ -18,7 +18,7 @@ class SignUpForm extends React.Component {
         axios.post('/api/users', {'data': data}).then(res => {
             this.setState({showSuccess: true,serverMessage: ''});
         }).catch(err => {
-            this.setState({serverMessage: 'Error occured'});
+            this.setState({serverMessage: err.response.data});
         });
     }
 

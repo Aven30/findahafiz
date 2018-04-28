@@ -1,6 +1,6 @@
 import React from 'react'
 import {Button, Form, FormGroup, Label, Input, FormText, Alert} from 'reactstrap';
-var validator = require('validator');
+import validator from 'validator';
 
 class FormDetails extends React.Component {
     constructor(props) {
