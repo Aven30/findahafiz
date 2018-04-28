@@ -25,6 +25,7 @@ export default class Header extends React.Component {
         axios.post('/api/users/logout', null).then((msg) => {
             console.log('Logged out '+msg);
         }).catch(console.warn);
+        window.location.reload();
     }
 
     toggleSignUp() {
